@@ -10,6 +10,7 @@ var platypus = []byte{0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20
 
 func init() {
 	pf := flag.NewFlagSet("platypus", flag.ContinueOnError)
+	pf.SetOutput(os.DevNull)
 	var p bool
 	pf.BoolVar(&p, "platypus", false, "Why the platypus?")
 	pf.Parse(os.Args[1:])
