@@ -12,7 +12,7 @@ func init() {
 	pf := flag.NewFlagSet("platypus", flag.ContinueOnError)
 	var p bool
 	pf.BoolVar(&p, "platypus", false, "Why the platypus?")
-	_ := pf.Parse(os.Args[1:])
+	pf.Parse(os.Args[1:])
 	if p {
 		fmt.Println(string(platypus))
 	}
